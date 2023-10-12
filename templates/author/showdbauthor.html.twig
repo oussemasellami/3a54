@@ -1,0 +1,17 @@
+<table border="3">
+    <tr>
+        <td>Id</td>
+        <td>username</td>
+        <td>email</td>
+        <td>Action</td>
+    </tr>
+    {% for a in author %}
+    <tr>
+        <td>{{a.id}}</td>
+        <td>{{a.username}}</td>
+        <td>{{a.email}}</td>
+        <td><a href="{{path('editauthor',{'id':a.id})}}">edit</a></td>
+        <td><a href="{{path('deleteauthor',{'id':a.id})}}">delete</a></td>
+    </tr>
+    {% endfor %}
+</table>
