@@ -1,0 +1,16 @@
+<table border="3">
+    <tr>
+        <td>id</td>
+        <td>name</td>
+    </tr>
+
+{%for i in room %}
+    <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.name}}</td>
+        <td><a href="{{path('editroom',{'id':i.id})}}">edit</a></td>
+        <td><a href="{{path('deleteroom',{'id':i.id})}}">delete</a></td>
+    </tr>
+
+    {% endfor %}
+</table>

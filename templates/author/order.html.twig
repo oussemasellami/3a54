@@ -1,8 +1,3 @@
-{{form_start(f)}}
-{{form_label(f.username)}}
-{{form_widget(f.username)}}
-{{form_end(f)}}
-
 <table border="3">
     <tr>
         <td>id</td>
@@ -15,10 +10,8 @@
         <td>{{a.id}}</td>
         <td>{{a.username}}</td>
         <td>{{a.email}}</td>
-        <td>{{a.nbrlivre}}</td>
         <td><a href="{{path('editauthor',{'id':a.id})}}">edit</a></td>
         <td><a href="{{path('deleteauthor',{'id':a.id})}}">delete</a></td>
-        <td><a href="{{path('showbooksauthor',{'id':a.id})}}">show</a></td>
     </tr>
     {% endfor %}
 </table>
